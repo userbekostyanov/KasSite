@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Денежный Кзаик 💸</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f8ff;
+            padding: 50px;
+        }
+        .money-box {
+            background: gold;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 300px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        button {
+            background: green;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+        .money {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>💰 Кзаик на деньги 💰</h1>
+    
+    <div class="money-box">
+        <div class="money" id="cash">$0</div>
+        <button onclick="addMoney()">Получить деньги!</button>
+        <button onclick="resetMoney()">Обнулить</button>
+    </div>
+
+    <script>
+        let money = 0;
+        
+        function addMoney() {
+            money += 100;
+            document.getElementById('cash').textContent = '$' + money;
+        }
+        
+        function resetMoney() {
+            money = 0;
+            document.getElementById('cash').textContent = '$0';
+        }
+    </script>
+</body>
+</html>
